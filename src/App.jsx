@@ -1,11 +1,8 @@
-
-import './App.css'
-import { BrowserRouter , Routes , Route } from 'react-router-dom';
-import Body from './Body';
-import Login from './Components/Login';
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Body from "./Components/Body";
+import Login from "./Components/Login";
 function App() {
-  
-
   return (
     <>
       <BrowserRouter basename="/">
@@ -19,4 +16,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
