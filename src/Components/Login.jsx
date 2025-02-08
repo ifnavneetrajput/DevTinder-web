@@ -10,6 +10,7 @@ const Login = () => {
   const [password, setpassword] = useState("Virat@123")
   const dispatch = useDispatch()
   const navigate = useNavigate()
+  const [error ,setError]= useState("")
 
   const handleSubmit = async() => {
    try{ const res = await axios.post(BASE_URL +"/login", {
@@ -19,11 +20,12 @@ const Login = () => {
      withCredentials: true
    })
      dispatch(addUser(res.data))
-     navigate("/feed")
-     console.log(res)
+    return  navigate("/feed")
+     
    }
    catch (err) {
-     console.log("error is " , err)
+     setError(err?.response?.data || "something went wrong")
+     console.log(err)
     }
   }
   
@@ -54,7 +56,7 @@ const Login = () => {
               onChange={(e)=>setpassword(e.target.value)}
             />
           </label>
-
+          <p className="text-red-600">{error}</p>
           <div className="card-actions justify-center my-3">
             <button className="btn btn-primary " onClick={handleSubmit}>Login</button>
           </div>
