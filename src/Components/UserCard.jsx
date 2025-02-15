@@ -1,12 +1,13 @@
 import PropTypes from "prop-types";
 const UserCard = ({ user }) => {
   const { firstName, lastName, age, gender, photoUrl, about } = user;
-  console.log(firstName)
+
 
   return (
-    <div className="card bg-base-100 w-80 h-96  shadow-xl">
+    <div className="card bg-base-100 w-80   shadow-xl">
       <figure>
         <img
+          className=""
           src={photoUrl}
           alt="Shoes"
         />

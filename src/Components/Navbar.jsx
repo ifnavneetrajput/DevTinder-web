@@ -6,6 +6,7 @@ import { removeUser } from "../utils/userSlice";
 
 const Navbar = () => {
   const user = useSelector((store) => store.user);
+  console.log(user)
   const navigate = useNavigate();
   const dispatch = useDispatch()
   const handleLogout = async() => {
@@ -29,7 +30,7 @@ const Navbar = () => {
         </div>
       { user && <div className="flex-none gap-2">
         <div className="form-control">
-        <p>welcome {user.firstName} </p>
+        <p>welcome , {user?.firstName} </p>
         </div>
           <div className="dropdown dropdown-end">
         <div

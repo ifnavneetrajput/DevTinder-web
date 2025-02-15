@@ -33,7 +33,7 @@ const Login = () => {
     <div className=" flex justify-center items-center my-2">
       <div className="card bg-gray-200 w-96 shadow-xl x">
         <div className="card-body ">
-          <h2 className="card-title">Card title!</h2>
+          <h2 className="card-title">Login</h2>
           <label className="form-control w-full max-w-xs">
             <div className="label">
               <span className="label-text">email</span>
