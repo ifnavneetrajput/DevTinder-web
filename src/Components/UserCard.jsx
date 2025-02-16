@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 const UserCard = ({ user }) => {
+  if(!user) return
   const { firstName, lastName, age, gender, photoUrl, about } = user;
 
 
