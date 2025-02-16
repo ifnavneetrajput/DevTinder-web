@@ -10,7 +10,7 @@ const Feed = () => {
   const feed = useSelector((store => store.feed))
 
   const getFeed = async () => {
-    if(feed) return
+
     const res = await axios.get(BASE_URL + "/feed", { withCredentials: true })
     
     dispatch(addFeed(res?.data))
@@ -20,7 +20,7 @@ const Feed = () => {
     getFeed()
   }, [])
   if (!feed) return
-  if(feed.length===0) return <h1 className="text-center text-bold text-3xl m-20">No new user found for you</h1>
+  if(feed.length ===0) return <h1 className="text-center text-bold text-3xl m-20">No new user found for you</h1>
   return (
     feed && (
       <>

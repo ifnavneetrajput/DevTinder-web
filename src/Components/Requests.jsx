@@ -16,6 +16,7 @@ const Requests = () => {
            { withCredentials: true },
 
          );
+    
          
           dispatch(removeRequests(_id));
          
@@ -52,6 +53,10 @@ const Requests = () => {
       <div className="text-center justify-center my-10">
         <div className="text-bold text-center text-3xl">Requests</div>
         {requests?.map((request) => {
+
+           if (!request.fromUserId) {
+             return null; // Skip this request if fromUserId is null
+           }
           const { _id, firstName, lastName, photoUrl, age, gender, about } =
             request.fromUserId;
 
