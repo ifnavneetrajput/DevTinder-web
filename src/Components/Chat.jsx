@@ -56,7 +56,7 @@ const Chat = () => {
           >
             <div className="chat-header">
               {msg.firstName}
-              <time className="text-xs opacity-50 ml-2">2 hours ago</time>
+              <time className="text-xs opacity-50 ml-2">few momoents ago</time>
             </div>
             <div className="chat-bubble">{msg.newMessages}</div>
             <div className="chat-footer opacity-50">Seen</div>
