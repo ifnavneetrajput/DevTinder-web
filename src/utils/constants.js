@@ -1,1 +1,1 @@
-export const BASE_URL = "https://tinder-server-cxsh.onrender.com";
+export const BASE_URL = import.meta.env.VITE_BASE_URL;
